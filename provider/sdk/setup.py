@@ -32,12 +32,12 @@ setup(
         "feast[redis]==0.18.1",
         "azure-storage-blob>=0.37.0",
         "azure-identity>=1.6.1",
-        "SQLAlchemy>=1.4.19",
         "dill==0.3.4",
-        "pyodbc>=4.0.30",
     ],
     extras_require={"dev": ["pytest", "mypy", "assertpy"],
-                    "snowflake": ["snowflake-connector-python[pandas]>=2.7.3"]},
+                    "snowflake": ["snowflake-connector-python[pandas]>=2.7.3"],
+                    "mssql": ["SQLAlchemy>=1.4.19","pyodbc>=4.0.30"],
+                    },
     # https://stackoverflow.com/questions/28509965/setuptools-development-requirements
     # Install dev requirements with: pip install -e .[dev]
     include_package_data=True,
